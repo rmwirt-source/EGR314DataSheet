@@ -791,20 +791,79 @@
   <h1>Module's Requirements</h1>
 
 <h2 id="module-requirements">Module Requirements</h2>
-<p>This table outlines the functional and technical requirements for the controller module of the system. The controller module is responsible for receiving user input from a handheld game controller, transmitting that input wirelessly, and providing control signals to the rover during operation. Defining these requirements helps ensure the module meets minimum functionality while also identifying target performance goals and optional stretch features that may be implemented if time allows. These requirements guide hardware selection, communication design, and testing throughout development.
-<br><br>
-| <strong>Requirement Description</strong> | <strong>Measure of<br> Threshold</strong> | <strong>Target<br>Measure</strong> | <strong>Stretch<br>Requirement<br>(Y-N)</strong> |
-|-----------------------------|-----------------------------|-----------------------|:----------------------------------:|
-| Wi Fi enabled microcontroller | An ESP32 that can successfully connect to a Wi Fi network | An ESP32 that supports reliable TCP or UDP communication | No |
-| Wireless link architecture | Controller input is sent from a laptop to the ESP32 over Wi Fi at a basic update rate | Controller input is transmitted using UDP or WebSocket at a higher, more responsive update rate | No |
-| Controller compatibility | One supported Xbox or PlayStation controller connected to the laptop | Both Xbox and PlayStation controllers supported on the laptop | No |
-| Controller input latency | User input results in a visible response within a noticeable but usable time | User input results in a near real time response | No |
-| Module power during testing | Module operates while powered through a USB connection | Module can operate using a battery with appropriate voltage regulation | No |
-| Firmware functionality | Incoming control data is received and used to set output signals | Control inputs are mapped and filtered to improve responsiveness and usability | No |
-| Test and verification | Basic manual testing confirms that controller inputs affect system behavior | Repeatable tests are used to measure responsiveness and consistency | No |
-| Message format | Control data is sent in a simple, readable format containing button and axis values | Control messages include additional information such as timing or ordering data | Yes |
-| Physical user interface | A single indicator shows whether the module is powered and active | Multiple indicators show power and wireless connection status | Yes |
-| Security | No authentication is required during initial testing | A simple authentication method is used to limit unintended connections | Yes |</p>
+<p>This table outlines the functional and technical requirements for the controller module of the system. The controller module is responsible for receiving user input from a handheld game controller, transmitting that input wirelessly, and providing control signals to the rover during operation. Defining these requirements helps ensure the module meets minimum functionality while also identifying target performance goals and optional stretch features that may be implemented if time allows. These requirements guide hardware selection, communication design, and testing throughout development.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Requirement Description</strong></th>
+<th><strong>Measure of<br>Threshold</strong></th>
+<th><strong>Target<br>Measure</strong></th>
+<th style="text-align: center;"><strong>Stretch<br>Requirement<br>(Y-N)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wi Fi enabled microcontroller</td>
+<td>An ESP32 that can successfully connect to a Wi Fi network</td>
+<td>An ESP32 that supports reliable TCP or UDP communication</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Wireless link architecture</td>
+<td>Controller input is sent from a laptop to the ESP32 over Wi Fi at a basic update rate</td>
+<td>Controller input is transmitted using UDP or WebSocket at a higher, more responsive update rate</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Controller compatibility</td>
+<td>One supported Xbox or PlayStation controller connected to the laptop</td>
+<td>Both Xbox and PlayStation controllers supported on the laptop</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Controller input latency</td>
+<td>User input results in a visible response within a noticeable but usable time</td>
+<td>User input results in a near real time response</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Module power during testing</td>
+<td>Module operates while powered through a USB connection</td>
+<td>Module can operate using a battery with appropriate voltage regulation</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Firmware functionality</td>
+<td>Incoming control data is received and used to set output signals</td>
+<td>Control inputs are mapped and filtered to improve responsiveness and usability</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Test and verification</td>
+<td>Basic manual testing confirms that controller inputs affect system behavior</td>
+<td>Repeatable tests are used to measure responsiveness and consistency</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Message format</td>
+<td>Control data is sent in a simple, readable format containing button and axis values</td>
+<td>Control messages include additional information such as timing or ordering data</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Physical user interface</td>
+<td>A single indicator shows whether the module is powered and active</td>
+<td>Multiple indicators show power and wireless connection status</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>No authentication is required during initial testing</td>
+<td>A simple authentication method is used to limit unintended connections</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+</tbody>
+</table>
 
 
 
