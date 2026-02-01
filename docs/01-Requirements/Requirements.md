@@ -4,8 +4,9 @@ title: Module's Requirements
 
 ## Module Requirements
 This table outlines the functional and technical requirements for the controller module of the system. The controller module is responsible for receiving user input from a handheld game controller, transmitting that input wirelessly, and providing control signals to the rover during operation. Defining these requirements helps ensure the module meets minimum functionality while also identifying target performance goals and optional stretch features that may be implemented if time allows. These requirements guide hardware selection, communication design, and testing throughout development.
-<br><br>
-| **Requirement Description** | **Measure of<br> Threshold** | **Target<br>Measure** | **Stretch<br>Requirement<br>(Y-N)** |
+
+
+| **Requirement Description** | **Measure of<br>Threshold** | **Target<br>Measure** | **Stretch<br>Requirement<br>(Y-N)** |
 |-----------------------------|-----------------------------|-----------------------|:----------------------------------:|
 | Wi Fi enabled microcontroller | An ESP32 that can successfully connect to a Wi Fi network | An ESP32 that supports reliable TCP or UDP communication | No |
 | Wireless link architecture | Controller input is sent from a laptop to the ESP32 over Wi Fi at a basic update rate | Controller input is transmitted using UDP or WebSocket at a higher, more responsive update rate | No |
