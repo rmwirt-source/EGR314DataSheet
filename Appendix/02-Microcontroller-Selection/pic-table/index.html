@@ -1034,92 +1034,76 @@
 <tr>
 <th>PIC Info</th>
 <th>Answer</th>
-<th>Help</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Model</td>
-<td>?</td>
-<td>Include the entire part number (leave off any letters at the end that specify the package type)</td>
+<td>PIC18F47K42</td>
 </tr>
 <tr>
 <td>Product Page URL</td>
-<td>?</td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
+<td><a href="https://www.microchip.com/en-us/product/PIC18F47K42">Microchip Product Page</a></td>
 </tr>
 <tr>
 <td>Datasheet URL(s)</td>
-<td>?</td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
+<td><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/PIC18(L)F27-47K42-Data-Sheet-40002043F.pdf">PIC18F27/47K42 Datasheet</a></td>
 </tr>
 <tr>
 <td>Application Notes URL(s)</td>
-<td>?</td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
+<td><a href="https://www.microchip.com/en-us/product/PIC18F47K42#document-table">Microchip Application Notes</a></td>
 </tr>
 <tr>
 <td>Vendor link</td>
-<td>?</td>
-<td>Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a <a href="#">link</a></td>
+<td><a href="https://www.digikey.com/en/products/detail/microchip-technology/PIC18F47K42T-I-MV/7561728">DigiKey Listing</a></td>
 </tr>
 <tr>
 <td>Code Examples</td>
-<td>?</td>
-<td>url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals</td>
+<td><a href="https://github.com/microchip-pic-avr-examples">Microchip Code Examples</a></td>
 </tr>
 <tr>
 <td>External Resources URL(s)</td>
-<td>?</td>
-<td>Search on Google and YouTube for other resources for each specific microcontroller.</td>
+<td><a href="https://microchipdeveloper.com/">Microchip Developer Help</a></td>
 </tr>
 <tr>
 <td>Unit cost</td>
-<td>?</td>
-<td>Find in the Microchip online store, or Digikey</td>
+<td>~$5–7 USD (varies by quantity)</td>
 </tr>
 <tr>
 <td>Absolute Maximum Current for entire IC</td>
-<td>?</td>
-<td>Find in the microcontroller datasheet</td>
+<td>300 mA total device current (see datasheet)</td>
 </tr>
 <tr>
 <td>Supply Voltage Range</td>
-<td>?</td>
-<td>Min / Nominal / Max / Absolute Max, as found in datasheet</td>
+<td>1.8V – 5.5V (Nominal 3.3V)</td>
 </tr>
 <tr>
-<td>Absolute Maximum current <br> (for entire IC)</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>Absolute Maximum current (for entire IC)</td>
+<td>300 mA</td>
 </tr>
 <tr>
-<td>Maximum GPIO current <br> (per pin)</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>Maximum GPIO current (per pin)</td>
+<td>25 mA per pin (absolute max)</td>
 </tr>
 <tr>
 <td>Supports External Interrupts?</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td>Required Programming Hardware, Cost, URL</td>
-<td>?</td>
-<td>found on the microcontroller's product page</td>
+<td>MPLAB SNAP (~$35) <a href="https://www.microchip.com/en-us/development-tool/PG164100">SNAP Tool</a></td>
 </tr>
 <tr>
 <td>Works with MPLabX?</td>
-<td>?</td>
-<td>Required.  See <a href="https://www.microchip.com/development-tools">Microchip Development Tools</a></td>
+<td>Yes</td>
 </tr>
 <tr>
 <td>Works with Microchip Code Configurator?</td>
-<td>?</td>
-<td>Can be validated in MPLabX.  Screenshot required.</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
+<hr>
 <table>
 <thead>
 <tr>
@@ -1132,51 +1116,45 @@
 <tbody>
 <tr>
 <td>GPIO</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>35+</td>
+<td>~6–10</td>
+<td>*</td>
 </tr>
 <tr>
 <td>ADC</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>35 channels</td>
+<td>1</td>
+<td>RA0 (battery sense)</td>
 </tr>
 <tr>
 <td>UART</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>2 EUSART</td>
+<td>2</td>
+<td>TX1/RX1 (Bus), TX2/RX2 (ESP32)</td>
 </tr>
 <tr>
 <td>SPI</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>2 MSSP</td>
+<td>0–1</td>
+<td>*</td>
 </tr>
 <tr>
 <td>I2C</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>2 MSSP</td>
+<td>1</td>
+<td>SDA/SCL (IMU)</td>
 </tr>
 <tr>
 <td>PWM</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>5+ CCP</td>
+<td>0–2</td>
+<td>*</td>
 </tr>
 <tr>
 <td>ICSP</td>
-<td>?</td>
 <td>1</td>
-<td>?</td>
-</tr>
-<tr>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
+<td>1</td>
+<td>MCLR, PGEC, PGED</td>
 </tr>
 </tbody>
 </table>
