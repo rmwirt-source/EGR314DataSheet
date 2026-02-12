@@ -24,7 +24,7 @@
 
     
       
-        <title>Appendix - Power Budget - EGR 314 Wirt Data Sheet</title>
+        <title>Power Budget - EGR 314 Wirt Data Sheet</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#power-budget-controller-subsystem" class="md-skip">
           Skip to content
         </a>
       
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Appendix - Power Budget
+              Power Budget
             
           </span>
         </div>
@@ -903,7 +903,7 @@
           
   
   <span class="md-ellipsis">
-    Appendix - Power Budget
+    Power Budget
   </span>
   
 
@@ -914,7 +914,7 @@
         
   
   <span class="md-ellipsis">
-    Appendix - Power Budget
+    Power Budget
   </span>
   
 
@@ -934,27 +934,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#power-budget-controller-subsystem" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Power Budget — Controller Subsystem
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusions" class="md-nav__link">
+  <a href="#devices-considered-controller-board-only" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusions
+      Devices considered (controller board only)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#add-25-safety-margin-course-requirement" class="md-nav__link">
     <span class="md-ellipsis">
-      Resouces
+      Add 25% safety margin (course requirement)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-power-and-input-current-calculation-digit-by-digit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output power and input current calculation (digit-by-digit)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery-sizing-and-run-time-estimate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery sizing and run time estimate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-rail-summary-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power rail summary (recommended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-protection-and-input-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended protection and input components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-scenarios-quick-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate scenarios (quick notes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -1060,27 +1114,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#power-budget-controller-subsystem" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Power Budget — Controller Subsystem
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#conclusions" class="md-nav__link">
+  <a href="#devices-considered-controller-board-only" class="md-nav__link">
     <span class="md-ellipsis">
-      Conclusions
+      Devices considered (controller board only)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resouces" class="md-nav__link">
+  <a href="#add-25-safety-margin-course-requirement" class="md-nav__link">
     <span class="md-ellipsis">
-      Resouces
+      Add 25% safety margin (course requirement)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-power-and-input-current-calculation-digit-by-digit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output power and input current calculation (digit-by-digit)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#battery-sizing-and-run-time-estimate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Battery sizing and run time estimate
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-rail-summary-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power rail summary (recommended)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-protection-and-input-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended protection and input components
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alternate-scenarios-quick-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alternate scenarios (quick notes)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
     </span>
   </a>
   
@@ -1101,20 +1209,165 @@
                   
 
 
-  <h1>Appendix - Power Budget</h1>
+  <h1>Power Budget</h1>
 
-<h2 id="overview">Overview</h2>
-<p>Write a overview of what you did and why you did a Power Budget.</p>
-<blockquote>
-<p>Capture your power budge as a image to display. Take time to get clean breaks and a well organized layout.</p>
-</blockquote>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg1.png" data-desc-position="bottom"><img alt="budget1" height:_300_="height:&quot;300;&quot;" src="../budgetPg1.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg2.png" data-desc-position="bottom"><img alt="budget2" height:_300_="height:&quot;300;&quot;" src="../budgetPg2.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../budgetPg3.png" data-desc-position="bottom"><img alt="budget3" height:_300_="height:&quot;300;&quot;" src="../budgetPg3.png" style="style" width:_350_="width:&quot;350&quot;"></a></p>
-<h2 id="conclusions">Conclusions</h2>
-<p>From the prepare Power Budget, .....</p>
-<h2 id="resouces">Resouces</h2>
-<p>The power budget as a PDF download is available <a href="../PowerBudgetExample.pdf"><em>here</em></a>, and a Microsoft Excel Sheet <a href="../PowerBudgetExample.xlsx"><em>here</em></a>.</p>
+<h2 id="power-budget-controller-subsystem">Power Budget — Controller Subsystem</h2>
+<p><strong>Assumptions and notes</strong></p>
+<ul>
+<li>Input supply chosen for this budget: <strong>2S LiPo (nominal 7.4 V)</strong>.  </li>
+<li>Primary DC-DC regulator: <strong>MP2307DN-LF-Z</strong> configured for <strong>3.3 V output</strong>.  </li>
+<li>Converter efficiency assumed: <strong>90%</strong> (typical for a synchronous buck under moderate load).  </li>
+<li>All values are worst-case or conservative estimates. Intermediate and average numbers are listed where appropriate.  </li>
+<li>Required safety margin: <strong>25%</strong> on calculated operating current (per course checklist).</li>
+</ul>
+<hr>
+<h2 id="devices-considered-controller-board-only">Devices considered (controller board only)</h2>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th style="text-align: right;">Voltage (V)</th>
+<th style="text-align: right;">Worst-case current (A)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESP32-S3-WROOM-1-N4 (WiFi tx peak)</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">0.400</td>
+<td>Peak WiFi transmit bursts; use worst-case for budgeting</td>
+</tr>
+<tr>
+<td>PIC18F47K42 (active)</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">0.030</td>
+<td>Active MCU typical ~10–30 mA; use 30 mA for conservative worst-case</td>
+</tr>
+<tr>
+<td>BNO055 IMU (breakout)</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">0.012</td>
+<td>Datasheet typical current ≈ 10–12 mA</td>
+</tr>
+<tr>
+<td>Miscellaneous (LEDs, pullups, UART transceivers, sensors)</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">0.020</td>
+<td>Allowance for LEDs, level shifters, logic, etc.</td>
+</tr>
+<tr>
+<td><strong>Total (worst-case)</strong></td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;"><strong>0.462</strong></td>
+<td>Sum of above currents</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="add-25-safety-margin-course-requirement">Add 25% safety margin (course requirement)</h2>
+<ul>
+<li>Total worst-case current = 0.462 A  </li>
+<li>Total with 25% margin = 0.462 A × 1.25 = <strong>0.5775 A</strong></li>
+</ul>
+<p>So the regulator must be sized to supply <strong>≥ 0.5775 A at 3.3 V</strong> continuously, with headroom for bursts.</p>
+<hr>
+<h2 id="output-power-and-input-current-calculation-digit-by-digit">Output power and input current calculation (digit-by-digit)</h2>
+<ol>
+<li>Output voltage Vout = <strong>3.3 V</strong>  </li>
+<li>Output current with margin Iout = <strong>0.5775 A</strong>  </li>
+<li>
+<p>Output power Pout = Vout × Iout = 3.3 × 0.5775 = <strong>1.90575 W</strong></p>
+</li>
+<li>
+<p>Assumed regulator efficiency η = <strong>0.90</strong>  </p>
+</li>
+<li>
+<p>Input voltage Vin = <strong>7.4 V (2S LiPo nominal)</strong></p>
+</li>
+<li>
+<p>Input current Iin = Pout / (Vin × η)<br>
+   = 1.90575 W / (7.4 V × 0.90)<br>
+   = 1.90575 / 6.66<br>
+   = <strong>0.28615 A</strong> (≈ 286.15 mA)</p>
+</li>
+</ol>
+<hr>
+<h2 id="battery-sizing-and-run-time-estimate">Battery sizing and run time estimate</h2>
+<ul>
+<li>Example battery chosen: <strong>2S LiPo, 2200 mAh</strong> (a common small pack).  </li>
+<li>Worst-case input current drawn from battery ≈ <strong>0.28615 A</strong>.</li>
+</ul>
+<p>Battery life (hours) = Capacity (mAh) / (Iin × 1000)<br>
+= 2200 mAh / (286.15 mA)<br>
+≈ <strong>7.69 hours</strong></p>
+<p>Notes
+- This is a conservative worst-case continuous estimate including the 25% safety margin on output current and a conservative efficiency assumption.<br>
+- Short WiFi TX bursts will draw high current momentarily; average system current may be much lower, giving longer real-world run time.<br>
+- If a larger motor load or other high-current peripherals are later added to this board, re-evaluate the rail and battery sizing.</p>
+<hr>
+<h2 id="power-rail-summary-recommended">Power rail summary (recommended)</h2>
+<table>
+<thead>
+<tr>
+<th>Rail</th>
+<th>Source/Regulator</th>
+<th style="text-align: right;">Nominal voltage</th>
+<th style="text-align: right;">Max required current (with 25% margin)</th>
+<th style="text-align: right;">Suggested regulator rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.3 V (logic)</td>
+<td>MP2307DN-LF-Z (synchronous buck)</td>
+<td style="text-align: right;">3.3 V</td>
+<td style="text-align: right;">0.5775 A</td>
+<td style="text-align: right;">Use MP2307 (3 A rating) — provides ample headroom</td>
+</tr>
+<tr>
+<td>Bus / actuator power</td>
+<td>External / actuator board</td>
+<td style="text-align: right;">per team (not on controller)</td>
+<td style="text-align: right;">n/a</td>
+<td style="text-align: right;">Actuator board handles motor power rails</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rationale:</strong> MP2307 is rated for multiple amps. Using a 3 A rated buck provides comfortable headroom for transient events and future peripheral additions without needing a regulator change.</p>
+<hr>
+<h2 id="recommended-protection-and-input-components">Recommended protection and input components</h2>
+<ul>
+<li>Input transient suppression: <strong>TVS diode</strong> sized for 2S LiPo voltage.  </li>
+<li>Input fuse: <strong>PTC resettable fuse</strong> sized slightly above expected Iin (for example 0.5 A hold or 1 A depending on safety policy).  </li>
+<li>Bulk and decoupling capacitors per MP2307 datasheet and ESP32 layout guidelines.  </li>
+<li>Layout considerations: follow MP2307 reference layout exactly for loop area minimization and place ESP32 module keep-out and antenna clearance per Espressif datasheet.</li>
+</ul>
+<hr>
+<h2 id="alternate-scenarios-quick-notes">Alternate scenarios (quick notes)</h2>
+<ol>
+<li><strong>If supply is a 9 V barrel</strong>  </li>
+<li>
+<p>Vin increases, input current decreases slightly for same Pout. Recompute Iin using Vin = 9 V. Regulator still fine.</p>
+</li>
+<li>
+<p><strong>If bus power supplies 5 V</strong>  </p>
+</li>
+<li>
+<p>Use same calculation with Vin = 5 V and η = 0.90. Expect higher Iin and slightly lower battery life for given capacity.</p>
+</li>
+<li>
+<p><strong>If board will also power motors</strong>  </p>
+</li>
+<li>Recompute per-motor current and move motor power to a separate rail and regulator sized for motor current. Controller PCB should not route high motor currents unless explicitly designed for it.</li>
+</ol>
+<hr>
+<h2 id="references">References</h2>
+<ul>
+<li>MP2307 datasheet and layout recommendations: <a href="https://www.monolithicpower.com/en/documentview/productdocument/index/version/2/document_type/Datasheet/lang/EN/sku/MP2307/document_id/503/">Monolithic Power Systems MP2307 datasheet</a>  </li>
+<li>ESP32-S3 typical current characteristics: Espressif datasheet and examples (peak WiFi transmit currents).  </li>
+<li>BNO055 datasheet for IMU current draw: Bosch Sensortec BNO055 datasheet.</li>
+</ul>
 
 
 
