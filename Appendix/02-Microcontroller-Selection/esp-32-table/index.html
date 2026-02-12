@@ -1034,87 +1034,72 @@
 <tr>
 <th>ESP Info</th>
 <th>Answer</th>
-<th>Help</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Model</td>
-<td>?</td>
-<td>Include the entire part number (leave off any letters at the end that specify the package type)</td>
+<td>ESP32-S3-WROOM-1-N4</td>
 </tr>
 <tr>
 <td>Product Page URL</td>
-<td>?</td>
-<td>Found on Espressif.com</td>
+<td><a href="https://www.espressif.com/en/products/modules/esp32-s3-wroom-1">Espressif Product Page</a></td>
 </tr>
 <tr>
 <td>ESP32-S3-WROOM-1-N4 Datasheet URL</td>
-<td>?</td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
+<td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">Module Datasheet</a></td>
 </tr>
 <tr>
 <td>ESP32 S3 Datasheet URL</td>
-<td>?</td>
-<td>Has more detail on functions</td>
+<td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf">ESP32-S3 Datasheet</a></td>
 </tr>
 <tr>
 <td>ESP32 S3 Technical Reference Manual URL</td>
-<td>?</td>
-<td>Has details on I/O multiplexing, USB, and others</td>
+<td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf">ESP32-S3 TRM</a></td>
 </tr>
 <tr>
 <td>Vendor link</td>
-<td>?</td>
-<td>Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a <a href="#">link</a></td>
+<td><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey Listing</a></td>
 </tr>
 <tr>
 <td>Code Examples</td>
-<td>?</td>
-<td>url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals</td>
+<td><a href="https://github.com/espressif/esp-idf">ESP-IDF Examples</a></td>
 </tr>
 <tr>
 <td>External Resources URL(s)</td>
-<td>?</td>
-<td>Search on Google and YouTube for other resources for each specific microcontroller.</td>
+<td><a href="https://github.com/ricardoquesada/bluepad32">Bluepad32 Library</a></td>
 </tr>
 <tr>
 <td>Unit cost</td>
-<td>?</td>
-<td>Find on Digikey, Jameco, MPJA, or octopart</td>
+<td>~$6–8 USD</td>
 </tr>
 <tr>
 <td>Absolute Maximum Current for entire IC</td>
-<td>?</td>
-<td>Find in the microcontroller datasheet</td>
+<td>~500 mA peak during WiFi transmit</td>
 </tr>
 <tr>
 <td>Supply Voltage Range</td>
-<td>?</td>
-<td>Min / Nominal / Max / Absolute Max, as found in datasheet</td>
+<td>3.0V – 3.6V (Nominal 3.3V)</td>
 </tr>
 <tr>
-<td>Absolute Maximum current <br> (for entire IC)</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>Absolute Maximum current (for entire IC)</td>
+<td>~500 mA peak</td>
 </tr>
 <tr>
-<td>Maximum GPIO current <br> (per pin)</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>Maximum GPIO current (per pin)</td>
+<td>40 mA (absolute max, recommended &lt;20 mA)</td>
 </tr>
 <tr>
 <td>Supports External Interrupts?</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td>Required Programming Hardware, Cost, URL</td>
-<td>?</td>
-<td>as found in datasheet</td>
+<td>USB programming built-in (no external programmer required)</td>
 </tr>
 </tbody>
 </table>
+<hr>
 <table>
 <thead>
 <tr>
@@ -1127,61 +1112,54 @@
 <tbody>
 <tr>
 <td>UART</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>3+</td>
+<td>1</td>
+<td>TX/RX to PIC</td>
 </tr>
 <tr>
-<td>external SPI*</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>external SPI</td>
+<td>Multiple</td>
+<td>0</td>
+<td>*</td>
 </tr>
 <tr>
 <td>I2C</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>2</td>
+<td>0–1</td>
+<td>*</td>
 </tr>
 <tr>
 <td>GPIO</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>40+</td>
+<td>~4–6</td>
+<td>*</td>
 </tr>
 <tr>
 <td>ADC</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>20+</td>
+<td>0–1</td>
+<td>*</td>
 </tr>
 <tr>
 <td>LED PWM</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>8+</td>
+<td>0–2</td>
+<td>*</td>
 </tr>
 <tr>
 <td>Motor PWM</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>8+</td>
+<td>0</td>
+<td>*</td>
 </tr>
 <tr>
 <td>USB Programmer</td>
-<td>?</td>
+<td>Native USB</td>
 <td>1</td>
-<td>?</td>
-</tr>
-<tr>
-<td>...</td>
-<td></td>
-<td></td>
-<td></td>
+<td>USB D+/D-</td>
 </tr>
 </tbody>
 </table>
-<p>* The ESP32-S2 has multiple SPI interfaces, but some are for internal use</p>
 
 
 
