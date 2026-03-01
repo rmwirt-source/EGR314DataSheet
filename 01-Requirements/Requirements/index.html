@@ -24,7 +24,7 @@
 
     
       
-        <title>Module's Requirements - EGR 314 Wirt Data Sheet</title>
+        <title>Module Requirements - EGR 314 Wirt Data Sheet</title>
       
     
     
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Module's Requirements
+              Module Requirements
             
           </span>
         </div>
@@ -465,7 +465,7 @@
           
   
   <span class="md-ellipsis">
-    Module's Requirements
+    Module Requirements
   </span>
   
 
@@ -476,7 +476,7 @@
         
   
   <span class="md-ellipsis">
-    Module's Requirements
+    Module Requirements
   </span>
   
 
@@ -854,78 +854,91 @@
                   
 
 
-  <h1>Module's Requirements</h1>
+  <h1>Module Requirements</h1>
 
 <h2 id="module-requirements">Module Requirements</h2>
-<p>This table outlines the functional and technical requirements for the controller module of the system. The controller module is responsible for receiving user input from a handheld game controller, transmitting that input wirelessly, and providing control signals to the rover during operation. Defining these requirements helps ensure the module meets minimum functionality while also identifying target performance goals and optional stretch features that may be implemented if time allows. These requirements guide hardware selection, communication design, and testing throughout development.</p>
+<p>This table defines the functional and technical requirements for the Controller Module of Team 301’s rover system. The controller module is responsible for receiving controller input from a host device, transmitting structured control packets over Wi Fi, and generating output signals that command rover subsystems.</p>
+<p>These requirements establish measurable performance constraints that guide hardware selection, firmware development, communication architecture, and testing. Each requirement includes a minimum acceptable threshold, a target performance level, and whether it is considered a stretch objective.</p>
 <table>
 <thead>
 <tr>
 <th><strong>Requirement Description</strong></th>
-<th><strong>Measure of<br>Threshold</strong></th>
-<th><strong>Target<br>Measure</strong></th>
-<th style="text-align: center;"><strong>Stretch<br>Requirement<br>(Y-N)</strong></th>
+<th><strong>Measure of Threshold</strong></th>
+<th><strong>Target Measure</strong></th>
+<th style="text-align: center;"><strong>Stretch (Y/N)</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Wi Fi enabled microcontroller</td>
-<td>An ESP32 that can successfully connect to a Wi Fi network</td>
-<td>An ESP32 that supports reliable TCP or UDP communication</td>
+<td>ESP32 capable of connecting to a 2.4 GHz Wi Fi network</td>
+<td>ESP32 supports stable TCP or UDP communication for continuous packet transfer</td>
 <td style="text-align: center;">No</td>
 </tr>
 <tr>
-<td>Wireless link architecture</td>
-<td>Controller input is sent from a laptop to the ESP32 over Wi Fi at a basic update rate</td>
-<td>Controller input is transmitted using UDP or WebSocket at a higher, more responsive update rate</td>
+<td>Logic operating voltage</td>
+<td>Operates from regulated 3.3 V supply ±10%</td>
+<td>Operates from regulated 3.3 V supply ±5% with stable communication</td>
 <td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Wireless link update rate</td>
+<td>Minimum 10 packets per second</td>
+<td>≥ 50 packets per second for responsive control</td>
+<td style="text-align: center;">Yes</td>
 </tr>
 <tr>
 <td>Controller compatibility</td>
-<td>One supported Xbox or PlayStation controller connected to the laptop</td>
-<td>Both Xbox and PlayStation controllers supported on the laptop</td>
+<td>Supports one USB game controller connected to a laptop</td>
+<td>Supports both Xbox and PlayStation controllers</td>
 <td style="text-align: center;">No</td>
 </tr>
 <tr>
-<td>Controller input latency</td>
-<td>User input results in a visible response within a noticeable but usable time</td>
-<td>User input results in a near real time response</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td>Module power during testing</td>
-<td>Module operates while powered through a USB connection</td>
-<td>Module can operate using a battery with appropriate voltage regulation</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td>Firmware functionality</td>
-<td>Incoming control data is received and used to set output signals</td>
-<td>Control inputs are mapped and filtered to improve responsiveness and usability</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td>Test and verification</td>
-<td>Basic manual testing confirms that controller inputs affect system behavior</td>
-<td>Repeatable tests are used to measure responsiveness and consistency</td>
-<td style="text-align: center;">No</td>
-</tr>
-<tr>
-<td>Message format</td>
-<td>Control data is sent in a simple, readable format containing button and axis values</td>
-<td>Control messages include additional information such as timing or ordering data</td>
+<td>End to end control latency</td>
+<td>Functional response under 250 ms</td>
+<td>Near real time response under 100 ms</td>
 <td style="text-align: center;">Yes</td>
 </tr>
 <tr>
-<td>Physical user interface</td>
-<td>A single indicator shows whether the module is powered and active</td>
-<td>Multiple indicators show power and wireless connection status</td>
+<td>Firmware packet handling</td>
+<td>Correctly receives and parses incoming control packets</td>
+<td>Implements filtering and validation to improve stability</td>
 <td style="text-align: center;">Yes</td>
 </tr>
 <tr>
-<td>Security</td>
-<td>No authentication is required during initial testing</td>
-<td>A simple authentication method is used to limit unintended connections</td>
+<td>Output signal generation</td>
+<td>Generates digital output signals based on received data</td>
+<td>Outputs include configurable mapping for flexibility</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Maximum average current draw</td>
+<td>≤ 250 mA during active operation</td>
+<td>≤ 200 mA during active operation</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Power source flexibility</td>
+<td>Operates via USB 5 V input to onboard 3.3 V regulation</td>
+<td>Supports regulated battery input</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Message structure definition</td>
+<td>Packets include button and axis values</td>
+<td>Packets include timing, source ID, and error checking</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>System identification</td>
+<td>Module uses fixed network address</td>
+<td>Address configurable in firmware</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Status indication</td>
+<td>At least one LED indicates power</td>
+<td>Separate LEDs indicate power and Wi Fi connection state</td>
 <td style="text-align: center;">Yes</td>
 </tr>
 </tbody>
