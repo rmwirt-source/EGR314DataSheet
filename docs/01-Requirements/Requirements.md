@@ -1,20 +1,24 @@
 ---
-title: Module's Requirements
+title: Module Requirements
 ---
 
 ## Module Requirements
-This table outlines the functional and technical requirements for the controller module of the system. The controller module is responsible for receiving user input from a handheld game controller, transmitting that input wirelessly, and providing control signals to the rover during operation. Defining these requirements helps ensure the module meets minimum functionality while also identifying target performance goals and optional stretch features that may be implemented if time allows. These requirements guide hardware selection, communication design, and testing throughout development.
 
+This table defines the functional and technical requirements for the Controller Module of Team 301’s rover system. The controller module is responsible for receiving controller input from a host device, transmitting structured control packets over Wi Fi, and generating output signals that command rover subsystems.
 
-| **Requirement Description** | **Measure of<br>Threshold** | **Target<br>Measure** | **Stretch<br>Requirement<br>(Y-N)** |
-|-----------------------------|-----------------------------|-----------------------|:----------------------------------:|
-| Wi Fi enabled microcontroller | An ESP32 that can successfully connect to a Wi Fi network | An ESP32 that supports reliable TCP or UDP communication | No |
-| Wireless link architecture | Controller input is sent from a laptop to the ESP32 over Wi Fi at a basic update rate | Controller input is transmitted using UDP or WebSocket at a higher, more responsive update rate | No |
-| Controller compatibility | One supported Xbox or PlayStation controller connected to the laptop | Both Xbox and PlayStation controllers supported on the laptop | No |
-| Controller input latency | User input results in a visible response within a noticeable but usable time | User input results in a near real time response | No |
-| Module power during testing | Module operates while powered through a USB connection | Module can operate using a battery with appropriate voltage regulation | No |
-| Firmware functionality | Incoming control data is received and used to set output signals | Control inputs are mapped and filtered to improve responsiveness and usability | No |
-| Test and verification | Basic manual testing confirms that controller inputs affect system behavior | Repeatable tests are used to measure responsiveness and consistency | No |
-| Message format | Control data is sent in a simple, readable format containing button and axis values | Control messages include additional information such as timing or ordering data | Yes |
-| Physical user interface | A single indicator shows whether the module is powered and active | Multiple indicators show power and wireless connection status | Yes |
-| Security | No authentication is required during initial testing | A simple authentication method is used to limit unintended connections | Yes |
+These requirements establish measurable performance constraints that guide hardware selection, firmware development, communication architecture, and testing. Each requirement includes a minimum acceptable threshold, a target performance level, and whether it is considered a stretch objective.
+
+| **Requirement Description** | **Measure of Threshold** | **Target Measure** | **Stretch (Y/N)** |
+|-----------------------------|---------------------------|--------------------|:-----------------:|
+| Wi Fi enabled microcontroller | ESP32 capable of connecting to a 2.4 GHz Wi Fi network | ESP32 supports stable TCP or UDP communication for continuous packet transfer | No |
+| Logic operating voltage | Operates from regulated 3.3 V supply ±10% | Operates from regulated 3.3 V supply ±5% with stable communication | No |
+| Wireless link update rate | Minimum 10 packets per second | ≥ 50 packets per second for responsive control | Yes |
+| Controller compatibility | Supports one USB game controller connected to a laptop | Supports both Xbox and PlayStation controllers | No |
+| End to end control latency | Functional response under 250 ms | Near real time response under 100 ms | Yes |
+| Firmware packet handling | Correctly receives and parses incoming control packets | Implements filtering and validation to improve stability | Yes |
+| Output signal generation | Generates digital output signals based on received data | Outputs include configurable mapping for flexibility | Yes |
+| Maximum average current draw | ≤ 250 mA during active operation | ≤ 200 mA during active operation | Yes |
+| Power source flexibility | Operates via USB 5 V input to onboard 3.3 V regulation | Supports regulated battery input | No |
+| Message structure definition | Packets include button and axis values | Packets include timing, source ID, and error checking | Yes |
+| System identification | Module uses fixed network address | Address configurable in firmware | Yes |
+| Status indication | At least one LED indicates power | Separate LEDs indicate power and Wi Fi connection state | Yes |
