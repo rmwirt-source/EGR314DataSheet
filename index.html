@@ -431,10 +431,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#project-summary" class="md-nav__link">
     <span class="md-ellipsis">
       Project Summary
@@ -442,18 +441,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#my-contribution" class="md-nav__link">
     <span class="md-ellipsis">
       My Contribution
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -828,10 +822,9 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Introduction">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#project-summary" class="md-nav__link">
     <span class="md-ellipsis">
       Project Summary
@@ -839,18 +832,13 @@
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#my-contribution" class="md-nav__link">
     <span class="md-ellipsis">
       My Contribution
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -872,31 +860,45 @@
   <h1>Welcome</h1>
 
 <p></p><center>
-<font size="6"> Rylee Wirt Datasheet</font><br>
+<font size="6">Rylee Wirt – Controller Module Datasheet</font><br>
 as part of<br>
-<font size="8"> Project Name</font><br>
+<font size="8">EGR 314 Rover System</font><br>
 for<br>
-<font size="5"> Team 301 </font><br><p></p>
-<p><strong>Submission: May, 04, 2026</strong>
+<font size="5">Team 301</font><br><p></p>
+<p><strong>Submission: May 4, 2026</strong>
 </p></center><p></p>
+<hr>
 <h2 id="introduction">Introduction</h2>
+<p>This datasheet documents the complete design and implementation of the Controller Module developed for Team 301’s EGR 314 rover project. The purpose of this document is to provide a clear and technical overview of the electrical design, component selection, communication architecture, power requirements, and schematic development of the module.</p>
+<p>The controller module serves as the primary command interface within the rover system. It processes user input, formats structured communication packets, and transmits commands to other distributed modules over the team communication bus. The design is built around an ESP32 microcontroller operating at 3.3 V logic to ensure reliable digital communication and system integration.</p>
+<p>This datasheet allows a reader to understand not only what was built, but why design decisions were made and how the module satisfies system requirements.</p>
+<hr>
+<h2 id="project-summary">Project Summary</h2>
+<p>Team 301 is developing a distributed rover system composed of multiple independent but interconnected modules. Each subsystem is responsible for a defined role within the overall rover architecture and communicates through a shared message structure.</p>
+<p>The controller module functions as the central command node. It generates structured command messages that coordinate motor control, sensor interaction, and overall rover behavior. Proper voltage regulation, defined signal routing, and consistent packet formatting are critical to ensure stable operation across all modules.</p>
+<p>This document focuses specifically on the controller subsystem. For complete system level documentation, architecture diagrams, and team level integration details, visit the Team 301 website:</p>
+<p>https://asu-egr314-301-s-2026.github.io/EGR314-Team301/</p>
+<hr>
+<h2 id="my-contribution">My Contribution</h2>
+<p>My responsibility on Team 301 was the complete design and documentation of the Controller Module. This includes:</p>
 <ul>
-<li><strong>This needs to be updated so that a reader gets an idea of the purpose of this datasheet.</strong></li>
+<li>Defining functional and electrical requirements  </li>
+<li>Designing the block diagram and system interface  </li>
+<li>Selecting and justifying hardware components  </li>
+<li>Developing the schematic  </li>
+<li>Creating and analyzing the power budget  </li>
+<li>Documenting the electrical architecture  </li>
 </ul>
-<h3 id="project-summary">Project Summary</h3>
+<p>This datasheet is organized to guide readers through each stage of the design process:</p>
 <ul>
-<li>This needs to be updated to reflect <ins>your version</ins> of the team project, so when shared not via the team's report, the reader gets an idea of the direction of the project and how your work will contribute to the overall success.</li>
-<li>Add context that ties into the link to your <a href="https://asu-egr314-301-s-2026.github.io/EGR314-Team301/">team report.</a></li>
+<li><strong>Requirements</strong> define what the module must accomplish.  </li>
+<li><strong>Block Diagram</strong> illustrates signal flow, communication paths, and power distribution.  </li>
+<li><strong>Component Selection</strong> explains why specific hardware was chosen.  </li>
+<li><strong>BOM</strong> lists materials used in the design.  </li>
+<li><strong>Schematic</strong> shows the detailed electrical implementation.  </li>
+<li><strong>Power Budget</strong> analyzes current draw and system power needs.  </li>
 </ul>
-<h3 id="my-contribution">My Contribution</h3>
-<ul>
-<li>This needs to be updated to reflect a team introduction</li>
-<li>Content should also help an unfamiliar reader navigate to areas of interest. Information like:</li>
-</ul>
-<p>To review the details listed of the material used to construct the subsection, you can review it in the <a href="https://embedded-systems-design.github.io/EGR314DataSheetTemplate/04-BOM/BOM/">"BOM"</a> section of the datasheet.</p>
-<blockquote>
-<p>Continue for all the remaining/missing sections.</p>
-</blockquote>
+<p>Together, these sections demonstrate how the controller module integrates into the rover system and satisfies both functional and electrical design constraints.</p>
 
 
 
