@@ -21,14 +21,4 @@ title: Controller Table for the ESP32
 | Required Programming Hardware, Cost, URL      | USB programming built-in (no external programmer required) |
 
 ---
-
-| Module         | # Available | Needed | Associated Pins (or * for any) |
-| -------------- | ----------- | ------ | ------------------------------ |
-| UART           | 3+         | 1      | TX/RX to PIC |
-| external SPI   | Multiple   | 0      | * |
-| I2C            | 2          | 0–1    | * |
-| GPIO           | 40+        | ~4–6   | * |
-| ADC            | 20+        | 0–1    | * |
-| LED PWM        | 8+        | 0–2    | * |
-| Motor PWM      | 8+        | 0      | * |
-| USB Programmer | Native USB | 1      | USB D+/D- |
+For more information see the Microcontroller Selection Section in the Appendix
