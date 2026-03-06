@@ -31,4 +31,4 @@ USB D+ and D− lines are routed through 22Ω series resistors for proper signal
 
 The full schematic as a PDF download is available [*here*](ControllerSubsystem.pdf).
 
-The complete KiCad project files (including schematic and footprints) are available as a Zip archive [*here*](ControllerSubsystemSchematic.zip).
+The complete KiCad project files (including schematic and footprints) are available as a .zip archive [*here*](ControllerSubsystemSchematic.zip).
