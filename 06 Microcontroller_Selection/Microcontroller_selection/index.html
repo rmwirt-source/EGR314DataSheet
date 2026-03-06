@@ -24,7 +24,7 @@
 
     
       
-        <title>Microcontroller selection - EGR 314 Wirt Data Sheet</title>
+        <title>Controller Table for the ESP32 - EGR 314 Wirt Data Sheet</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Microcontroller selection
+              Controller Table for the ESP32
             
           </span>
         </div>
@@ -690,7 +690,7 @@
         
   
   <span class="md-ellipsis">
-    Microcontroller selection
+    Controller Table for the ESP32
   </span>
   
 
@@ -795,7 +795,139 @@
                   
 
 
-  <h1>Microcontroller selection</h1>
+  <h1>Controller Table for the ESP32</h1>
+
+<table>
+<thead>
+<tr>
+<th>ESP Info</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>ESP32-S3-WROOM-1-N4</td>
+</tr>
+<tr>
+<td>Product Page URL</td>
+<td><a href="https://www.espressif.com/en/products/modules/esp32-s3-wroom-1">Espressif Product Page</a></td>
+</tr>
+<tr>
+<td>ESP32-S3-WROOM-1-N4 Datasheet URL</td>
+<td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">Module Datasheet</a></td>
+</tr>
+<tr>
+<td>ESP32 S3 Datasheet URL</td>
+<td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_datasheet_en.pdf">ESP32-S3 Datasheet</a></td>
+</tr>
+<tr>
+<td>ESP32 S3 Technical Reference Manual URL</td>
+<td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf">ESP32-S3 TRM</a></td>
+</tr>
+<tr>
+<td>Vendor link</td>
+<td><a href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639">DigiKey Listing</a></td>
+</tr>
+<tr>
+<td>Code Examples</td>
+<td><a href="https://github.com/espressif/esp-idf">ESP-IDF Examples</a></td>
+</tr>
+<tr>
+<td>External Resources URL(s)</td>
+<td><a href="https://github.com/ricardoquesada/bluepad32">Bluepad32 Library</a></td>
+</tr>
+<tr>
+<td>Unit cost</td>
+<td>~$6–8 USD</td>
+</tr>
+<tr>
+<td>Absolute Maximum Current for entire IC</td>
+<td>~500 mA peak during WiFi transmit</td>
+</tr>
+<tr>
+<td>Supply Voltage Range</td>
+<td>3.0V – 3.6V (Nominal 3.3V)</td>
+</tr>
+<tr>
+<td>Absolute Maximum current (for entire IC)</td>
+<td>~500 mA peak</td>
+</tr>
+<tr>
+<td>Maximum GPIO current (per pin)</td>
+<td>40 mA (absolute max, recommended &lt;20 mA)</td>
+</tr>
+<tr>
+<td>Supports External Interrupts?</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Required Programming Hardware, Cost, URL</td>
+<td>USB programming built-in (no external programmer required)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th># Available</th>
+<th>Needed</th>
+<th>Associated Pins (or * for any)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART</td>
+<td>3+</td>
+<td>1</td>
+<td>TX/RX to PIC</td>
+</tr>
+<tr>
+<td>external SPI</td>
+<td>Multiple</td>
+<td>0</td>
+<td>*</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>2</td>
+<td>0–1</td>
+<td>*</td>
+</tr>
+<tr>
+<td>GPIO</td>
+<td>40+</td>
+<td>~4–6</td>
+<td>*</td>
+</tr>
+<tr>
+<td>ADC</td>
+<td>20+</td>
+<td>0–1</td>
+<td>*</td>
+</tr>
+<tr>
+<td>LED PWM</td>
+<td>8+</td>
+<td>0–2</td>
+<td>*</td>
+</tr>
+<tr>
+<td>Motor PWM</td>
+<td>8+</td>
+<td>0</td>
+<td>*</td>
+</tr>
+<tr>
+<td>USB Programmer</td>
+<td>Native USB</td>
+<td>1</td>
+<td>USB D+/D-</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -803,7 +935,8 @@
 
 
 
-
+  
+  
 
 
 
