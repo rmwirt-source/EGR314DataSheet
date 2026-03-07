@@ -24,7 +24,7 @@
 
     
       
-        <title>BOM - EGR 314 Wirt Data Sheet</title>
+        <title>Bill of Materials - EGR 314 Wirt Data Sheet</title>
       
     
     
@@ -87,6 +87,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#bill-of-materials-controller-subsystem" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -118,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              BOM
+              Bill of Materials
             
           </span>
         </div>
@@ -751,16 +756,93 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Bill of Materials
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    BOM
+    Bill of Materials
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Bill of Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-and-expansion-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug and Expansion Hardware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purchasing-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purchasing Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -847,6 +929,61 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-bill-of-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Bill of Materials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-and-expansion-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Debug and Expansion Hardware
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#purchasing-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Purchasing Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -861,7 +998,333 @@
                   
 
 
-  <h1>BOM</h1>
+<h1 id="bill-of-materials-controller-subsystem">Bill of Materials — Controller Subsystem</h1>
+<h2 id="overview">Overview</h2>
+<p>This document lists all components required for the Controller Subsystem PCB.<br>
+All components present in the schematic are included, including power regulation, protection, debugging hardware, connectors, and expansion interfaces.</p>
+<p>Quantities reflect:
+- One PCB assembly
+- Recommended spares for fragile or critical components
+- Common passive components sourced from Peralta workshop stock</p>
+<p>The subsystem operates from a 12V input and regulates to 3.3V using a switching buck converter (MP2307).</p>
+<hr>
+<h2 id="complete-bill-of-materials">Complete Bill of Materials</h2>
+<table>
+<thead>
+<tr>
+<th>Ref</th>
+<th>Qty</th>
+<th>Description</th>
+<th>Value</th>
+<th>Package</th>
+<th>Manufacturer</th>
+<th>MPN</th>
+<th>Vendor</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>U1</td>
+<td>1</td>
+<td>ESP32-S3-WROOM-1</td>
+<td>3.3V MCU Module</td>
+<td>SMD Module</td>
+<td>Espressif</td>
+<td>ESP32-S3-WROOM-1</td>
+<td>Peralta Stock</td>
+<td>Main microcontroller</td>
+</tr>
+<tr>
+<td>U2</td>
+<td>1</td>
+<td>Temperature Sensor</td>
+<td>TC74A4-3.3VCTTR</td>
+<td>SOT-23-5</td>
+<td>Microchip</td>
+<td>TC74A4-3.3VCTTR</td>
+<td>Peralta Stock</td>
+<td>I2C temperature sensor</td>
+</tr>
+<tr>
+<td>U3</td>
+<td>2</td>
+<td>Switching Regulator</td>
+<td>MP2307DN-LF-Z</td>
+<td>SOIC-8-EP</td>
+<td>Monolithic Power Systems</td>
+<td>MP2307DN-LF-Z</td>
+<td>DigiKey</td>
+<td>3.3V buck converter</td>
+</tr>
+<tr>
+<td>L1</td>
+<td>5</td>
+<td>Power Inductor</td>
+<td>10uH ≥3A</td>
+<td>4x4mm SMD</td>
+<td>Bourns</td>
+<td>SRN4018-100M</td>
+<td>DigiKey</td>
+<td>Buck regulator inductor</td>
+</tr>
+<tr>
+<td>C1</td>
+<td>1</td>
+<td>Capacitor</td>
+<td>0.01uF</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Decoupling</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>1</td>
+<td>Capacitor</td>
+<td>0.1uF</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Decoupling</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>1</td>
+<td>Capacitor</td>
+<td>3.9nF</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Compensation</td>
+</tr>
+<tr>
+<td>C4, C5</td>
+<td>2</td>
+<td>Capacitor</td>
+<td>0.1uF 50V</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Input filtering</td>
+</tr>
+<tr>
+<td>C6</td>
+<td>1</td>
+<td>Capacitor</td>
+<td>0.1uF 50V</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Bootstrap</td>
+</tr>
+<tr>
+<td>C7</td>
+<td>1</td>
+<td>Capacitor</td>
+<td>22uF 16V</td>
+<td>1206</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Regulator output</td>
+</tr>
+<tr>
+<td>C8</td>
+<td>1</td>
+<td>Capacitor</td>
+<td>22uF 25V</td>
+<td>1210</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Input bulk</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>1</td>
+<td>LED</td>
+<td>Red</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Status indicator</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>1</td>
+<td>LED</td>
+<td>Green</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Status indicator</td>
+</tr>
+<tr>
+<td>D3, D4</td>
+<td>5</td>
+<td>USB ESD Protection</td>
+<td>USBLC6-2SC6</td>
+<td>SOT-23-6</td>
+<td>STMicroelectronics</td>
+<td>USBLC6-2SC6</td>
+<td>DigiKey</td>
+<td>USB D+/D- protection</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>5</td>
+<td>Fuse</td>
+<td>2A Slow Blow</td>
+<td>1206</td>
+<td>Littelfuse</td>
+<td>0467002.NR</td>
+<td>DigiKey</td>
+<td>Input protection</td>
+</tr>
+<tr>
+<td>J1</td>
+<td>1</td>
+<td>Programming Header</td>
+<td>1x6 2.54mm</td>
+<td>SMD Header</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Debug access</td>
+</tr>
+<tr>
+<td>J2</td>
+<td>1</td>
+<td>Upstream Header</td>
+<td>2x4 2.54mm</td>
+<td>SMD Header</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Team interface</td>
+</tr>
+<tr>
+<td>J3</td>
+<td>1</td>
+<td>Downstream Header</td>
+<td>2x4 2.54mm</td>
+<td>SMD Header</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Team interface</td>
+</tr>
+<tr>
+<td>J4</td>
+<td>1</td>
+<td>Micro USB Connector</td>
+<td>USB Micro-B</td>
+<td>SMD</td>
+<td>Molex</td>
+<td>105017-0001</td>
+<td>Peralta Stock</td>
+<td>Programming &amp; power</td>
+</tr>
+<tr>
+<td>R1, R8</td>
+<td>2</td>
+<td>Resistor</td>
+<td>1kΩ</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>LED limiting</td>
+</tr>
+<tr>
+<td>R2</td>
+<td>1</td>
+<td>Resistor</td>
+<td>26.1kΩ</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Feedback network</td>
+</tr>
+<tr>
+<td>R3–R11</td>
+<td>6</td>
+<td>Resistor</td>
+<td>10kΩ</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Pull-ups &amp; biasing</td>
+</tr>
+<tr>
+<td>R6–R14</td>
+<td>5</td>
+<td>Resistor</td>
+<td>22Ω</td>
+<td>0805</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>USB termination</td>
+</tr>
+<tr>
+<td>SW1–SW3</td>
+<td>3</td>
+<td>Pushbutton</td>
+<td>Momentary</td>
+<td>SMD</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>EN &amp; GPIO control</td>
+</tr>
+<tr>
+<td>TP1–TP6</td>
+<td>6</td>
+<td>Test Points</td>
+<td>1.5mm Pad</td>
+<td>SMD</td>
+<td>Generic</td>
+<td>—</td>
+<td>Peralta Stock</td>
+<td>Debug access</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="debug-and-expansion-hardware">Debug and Expansion Hardware</h2>
+<p>This subsystem includes:</p>
+<ul>
+<li>Test points for USB D+, USB D−, 12V input, and inter-module connections</li>
+<li>Pushbuttons for EN and GPIO control</li>
+<li>USB interface for programming</li>
+<li>Upstream and downstream headers for team communication</li>
+<li>Surface mount fuse for input protection</li>
+</ul>
+<p>These additions support safe bring-up, debugging, and future expansion.</p>
+<hr>
+<h2 id="purchasing-summary">Purchasing Summary</h2>
+<p>The following components were ordered from DigiKey:</p>
+<ul>
+<li>MP2307DN-LF-Z</li>
+<li>SRN4018-100M</li>
+<li>USBLC6-2SC6</li>
+<li>0467002.NR</li>
+</ul>
+<p>Common passive components, connectors, and MCU modules are sourced from Peralta stock.</p>
+<hr>
+<h2 id="design-notes">Design Notes</h2>
+<p>The MP2307 switching regulator and 10uH inductor were selected to support peak ESP32 current draw while maintaining efficiency and thermal performance. USB ESD protection devices were added to protect the microcontroller from electrostatic discharge through the USB interface.</p>
 
 
 
@@ -869,7 +1332,8 @@
 
 
 
-
+  
+  
 
 
 
