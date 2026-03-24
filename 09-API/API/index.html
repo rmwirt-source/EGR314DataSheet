@@ -24,7 +24,7 @@
 
     
       
-        <title>API - EGR 314 Wirt Data Sheet</title>
+        <title>API — Controller Subsystem (Rylee) - EGR 314 Wirt Data Sheet</title>
       
     
     
@@ -87,6 +87,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -118,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              API
+              API — Controller Subsystem (Rylee)
             
           </span>
         </div>
@@ -884,15 +889,244 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    API — Controller Subsystem (Rylee)
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    API
+    API — Controller Subsystem (Rylee)
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-sent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages Sent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages Sent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0043-button-press" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0043 — Button Press
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0001-set-motor-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0001 — Set Motor Speed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-received" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages Received
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages Received">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0004-ack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0004 — ACK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0005-error-event-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0005 — Error / Event Log
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast-reactive-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast / Reactive Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Broadcast / Reactive Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0002-request-telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0002 — Request Telemetry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-handling-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Handling Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Handling Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#receiver-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receiver Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processing Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sender-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sender Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sender Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Packaging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Downloads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -980,6 +1214,215 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Information
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-sent" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages Sent
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages Sent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0043-button-press" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0043 — Button Press
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0001-set-motor-speed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0001 — Set Motor Speed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages-received" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages Received
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Messages Received">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0004-ack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0004 — ACK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0005-error-event-log" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0005 — Error / Event Log
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#broadcast-reactive-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Broadcast / Reactive Messages
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Broadcast / Reactive Messages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#message-type-0x0002-request-telemetry" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Type 0x0002 — Request Telemetry
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-handling-implementation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Handling Implementation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Handling Implementation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#receiver-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Receiver Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Processing Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sender-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sender Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sender Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-packaging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Packaging
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Downloads
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -993,7 +1436,380 @@
                   
 
 
-  <h1>API</h1>
+<h2 id="overview">Overview</h2>
+<p>This page defines the Application Programming Interface (API) for the Controller Input subsystem (Node ID <code>0x04</code>).</p>
+<p>This node is responsible for:
+- Handling local user input (buttons / controls)
+- Sending control commands to motor nodes
+- Forwarding all network traffic in the daisy-chain
+- Responding to system-level telemetry requests</p>
+<p>All messages follow the <strong>team-defined 64-byte packet structure</strong>, with this page focusing only on the <strong>message payload (bytes 4–61)</strong>.</p>
+<hr>
+<h2 id="node-information">Node Information</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Node Name</td>
+<td>Controller Input</td>
+</tr>
+<tr>
+<td>Node ID</td>
+<td><code>0x04</code></td>
+</tr>
+<tr>
+<td>Role</td>
+<td>Input + Routing Node</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="messages-sent">Messages Sent</h1>
+<hr>
+<h2 id="message-type-0x0043-button-press">Message Type <code>0x0043</code> — Button Press</h2>
+<p><strong>Description:</strong><br>
+Sent when a local button interaction occurs. This is forwarded to motor nodes and upstream logging systems.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bytes</td>
+<td>3+</td>
+</tr>
+<tr>
+<td>Message Type</td>
+<td><code>0x0043</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>button_id</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr>
+<td>7</td>
+<td>press_type</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>sequence</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong>
+- <code>press_type</code>: 0 = short, 1 = long, 2 = double
+- Sequence is used for debounce tracking or event ordering</p>
+<hr>
+<h2 id="message-type-0x0001-set-motor-speed">Message Type <code>0x0001</code> — Set Motor Speed</h2>
+<p><strong>Description:</strong><br>
+Controller-generated command sent to motor nodes.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bytes</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Message Type</td>
+<td><code>0x0001</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>motor_id</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr>
+<td>7–8</td>
+<td>speed</td>
+<td>uint16_t</td>
+<td>0</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>direction</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>flags</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes:</strong>
+- Speed is encoded as unsigned magnitude
+- Direction determines forward or reverse</p>
+<hr>
+<h1 id="messages-received">Messages Received</h1>
+<hr>
+<h2 id="message-type-0x0004-ack">Message Type <code>0x0004</code> — ACK</h2>
+<p><strong>Description:</strong><br>
+Acknowledgement for previously sent commands.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bytes</td>
+<td>3+</td>
+</tr>
+<tr>
+<td>Message Type</td>
+<td><code>0x0004</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>ack_type</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr>
+<td>7</td>
+<td>status</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>error_code</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Handling Behavior:</strong>
+- If <code>status = 0</code> → command successful
+- If <code>status = 1</code> → error occurred, log error_code
+- Generate debug output over UART</p>
+<hr>
+<h2 id="message-type-0x0005-error-event-log">Message Type <code>0x0005</code> — Error / Event Log</h2>
+<p><strong>Description:</strong><br>
+System-wide error reporting.</p>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>error_code</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr>
+<td>7</td>
+<td>severity</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Handling Behavior:</strong>
+- Log error message
+- Trigger warning indicator if severity ≥ 2</p>
+<hr>
+<h1 id="broadcast-reactive-messages">Broadcast / Reactive Messages</h1>
+<hr>
+<h2 id="message-type-0x0002-request-telemetry">Message Type <code>0x0002</code> — Request Telemetry</h2>
+<p><strong>Description:</strong><br>
+Broadcast request for system data.</p>
+<table>
+<thead>
+<tr>
+<th>Byte Offset</th>
+<th>Variable Name</th>
+<th>Type</th>
+<th>Min</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6</td>
+<td>telemetry_mask</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+</tr>
+<tr>
+<td>7</td>
+<td>timeout</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Handling Behavior:</strong>
+- Controller does not generate sensor telemetry
+- May respond with status if required
+- Always forwards message</p>
+<hr>
+<h1 id="message-handling-implementation">Message Handling Implementation</h1>
+<h2 id="receiver-requirements">Receiver Requirements</h2>
+<p>The controller implements a UART-based message handler that:</p>
+<ul>
+<li>Reads incoming bytes continuously</li>
+<li>Detects valid packet framing (<code>0x41 0x5A ... 0x59 0x42</code>)</li>
+<li>Verifies message length</li>
+<li>Ignores malformed packets</li>
+<li>Drops packets originating from itself</li>
+<li>Forwards packets not addressed to <code>0x04</code></li>
+<li>Processes valid messages addressed to this node</li>
+</ul>
+<h2 id="processing-logic">Processing Logic</h2>
+<ol>
+<li>Check destination:</li>
+<li>If <code>dst == 0x04</code> → process</li>
+<li>
+<p>Else → forward</p>
+</li>
+<li>
+<p>If message is valid:</p>
+</li>
+<li>Parse message type</li>
+<li>Extract payload fields</li>
+<li>
+<p>Execute corresponding handler</p>
+</li>
+<li>
+<p>Send ACK:</p>
+</li>
+<li>Always respond to valid commands with <code>0x0004</code></li>
+</ol>
+<hr>
+<h2 id="sender-requirements">Sender Requirements</h2>
+<p>The controller periodically sends:</p>
+<ul>
+<li>Button press events (<code>0x0043</code>)</li>
+<li>Motor commands (<code>0x0001</code>)</li>
+</ul>
+<h3 id="constraints">Constraints</h3>
+<ul>
+<li>Must respect max packet size (64 bytes)</li>
+<li>Must avoid reserved prefix/suffix values inside payload</li>
+<li>Must use correct source (<code>0x04</code>) and destination IDs</li>
+<li>Must be non-blocking and rate-limited</li>
+</ul>
+<hr>
+<h2 id="error-handling">Error Handling</h2>
+<p>The system safely ignores:</p>
+<ul>
+<li>Malformed packets</li>
+<li>Invalid message types</li>
+<li>Messages exceeding buffer size</li>
+<li>Unexpected payload values</li>
+</ul>
+<p>Errors may trigger:
+- UART debug print
+- LED indicator (optional)</p>
+<hr>
+<h2 id="software-packaging">Software Packaging</h2>
+<ul>
+<li>Full firmware project is included as a <code>.zip</code></li>
+<li>Code is structured for:</li>
+<li>Message parsing</li>
+<li>Routing</li>
+<li>Command handling</li>
+</ul>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>This API ensures that the Controller subsystem:</p>
+<ul>
+<li>Properly integrates into the team daisy-chain network</li>
+<li>Reliably sends user input commands</li>
+<li>Correctly processes acknowledgements and system messages</li>
+<li>Maintains robust communication through validation and error handling</li>
+</ul>
+<hr>
+<h2 id="downloads">Downloads</h2>
+<ul>
+<li><a href="LINK_TO_ZIP">Firmware ZIP</a></li>
+</ul>
 
 
 
@@ -1001,7 +1817,8 @@
 
 
 
-
+  
+  
 
 
 
