@@ -1042,9 +1042,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#receiver-requirements" class="md-nav__link">
+  <a href="#receiver-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      Receiver Requirements
+      Receiver Behavior
     </span>
   </a>
   
@@ -1060,13 +1060,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sender-requirements" class="md-nav__link">
+  <a href="#sender-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      Sender Requirements
+      Sender Behavior
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sender Requirements">
+    <nav class="md-nav" aria-label="Sender Behavior">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1093,9 +1093,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#software-packaging" class="md-nav__link">
+  <a href="#software-packaging-esp32" class="md-nav__link">
     <span class="md-ellipsis">
-      Software Packaging
+      Software Packaging (ESP32)
     </span>
   </a>
   
@@ -1339,9 +1339,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#receiver-requirements" class="md-nav__link">
+  <a href="#receiver-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      Receiver Requirements
+      Receiver Behavior
     </span>
   </a>
   
@@ -1357,13 +1357,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#sender-requirements" class="md-nav__link">
+  <a href="#sender-behavior" class="md-nav__link">
     <span class="md-ellipsis">
-      Sender Requirements
+      Sender Behavior
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sender Requirements">
+    <nav class="md-nav" aria-label="Sender Behavior">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1390,9 +1390,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#software-packaging" class="md-nav__link">
+  <a href="#software-packaging-esp32" class="md-nav__link">
     <span class="md-ellipsis">
-      Software Packaging
+      Software Packaging (ESP32)
     </span>
   </a>
   
@@ -1442,8 +1442,8 @@
 - Handling local user input (buttons / controls)
 - Sending control commands to motor nodes
 - Forwarding all network traffic in the daisy-chain
-- Responding to system-level telemetry requests</p>
-<p>All messages follow the <strong>team-defined 64-byte packet structure</strong>, with this page focusing only on the <strong>message payload (bytes 4–61)</strong>.</p>
+- Responding to system-level messages</p>
+<p>All messages follow the team-defined <strong>64-byte packet structure</strong>, with this page describing only the <strong>message payload (bytes 4–61)</strong>.</p>
 <hr>
 <h2 id="node-information">Node Information</h2>
 <table>
@@ -1473,25 +1473,7 @@
 <hr>
 <h2 id="message-type-0x0043-button-press">Message Type <code>0x0043</code> — Button Press</h2>
 <p><strong>Description:</strong><br>
-Sent when a local button interaction occurs. This is forwarded to motor nodes and upstream logging systems.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bytes</td>
-<td>3+</td>
-</tr>
-<tr>
-<td>Message Type</td>
-<td><code>0x0043</code></td>
-</tr>
-</tbody>
-</table>
+Sent when a local button interaction occurs.</p>
 <table>
 <thead>
 <tr>
@@ -1500,6 +1482,7 @@ Sent when a local button interaction occurs. This is forwarded to motor nodes an
 <th>Type</th>
 <th>Min</th>
 <th>Max</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
@@ -1509,6 +1492,7 @@ Sent when a local button interaction occurs. This is forwarded to motor nodes an
 <td>uint8_t</td>
 <td>0</td>
 <td>255</td>
+<td>1</td>
 </tr>
 <tr>
 <td>7</td>
@@ -1516,6 +1500,7 @@ Sent when a local button interaction occurs. This is forwarded to motor nodes an
 <td>uint8_t</td>
 <td>0</td>
 <td>2</td>
+<td>0</td>
 </tr>
 <tr>
 <td>8</td>
@@ -1523,34 +1508,16 @@ Sent when a local button interaction occurs. This is forwarded to motor nodes an
 <td>uint8_t</td>
 <td>0</td>
 <td>255</td>
+<td>12</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Notes:</strong>
-- <code>press_type</code>: 0 = short, 1 = long, 2 = double
-- Sequence is used for debounce tracking or event ordering</p>
+- <code>press_type</code>: 0 = short, 1 = long, 2 = double</p>
 <hr>
 <h2 id="message-type-0x0001-set-motor-speed">Message Type <code>0x0001</code> — Set Motor Speed</h2>
 <p><strong>Description:</strong><br>
-Controller-generated command sent to motor nodes.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bytes</td>
-<td>5</td>
-</tr>
-<tr>
-<td>Message Type</td>
-<td><code>0x0001</code></td>
-</tr>
-</tbody>
-</table>
+Command sent to motor nodes.</p>
 <table>
 <thead>
 <tr>
@@ -1559,6 +1526,7 @@ Controller-generated command sent to motor nodes.</p>
 <th>Type</th>
 <th>Min</th>
 <th>Max</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
@@ -1568,6 +1536,7 @@ Controller-generated command sent to motor nodes.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>255</td>
+<td>1</td>
 </tr>
 <tr>
 <td>7–8</td>
@@ -1575,6 +1544,7 @@ Controller-generated command sent to motor nodes.</p>
 <td>uint16_t</td>
 <td>0</td>
 <td>1000</td>
+<td>250</td>
 </tr>
 <tr>
 <td>9</td>
@@ -1582,6 +1552,7 @@ Controller-generated command sent to motor nodes.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>1</td>
+<td>0</td>
 </tr>
 <tr>
 <td>10</td>
@@ -1589,36 +1560,19 @@ Controller-generated command sent to motor nodes.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>255</td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Notes:</strong>
-- Speed is encoded as unsigned magnitude
-- Direction determines forward or reverse</p>
+- Speed is magnitude
+- Direction: 0 = forward, 1 = reverse</p>
 <hr>
 <h1 id="messages-received">Messages Received</h1>
 <hr>
 <h2 id="message-type-0x0004-ack">Message Type <code>0x0004</code> — ACK</h2>
 <p><strong>Description:</strong><br>
-Acknowledgement for previously sent commands.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Bytes</td>
-<td>3+</td>
-</tr>
-<tr>
-<td>Message Type</td>
-<td><code>0x0004</code></td>
-</tr>
-</tbody>
-</table>
+Acknowledgement for commands sent by this node.</p>
 <table>
 <thead>
 <tr>
@@ -1627,6 +1581,7 @@ Acknowledgement for previously sent commands.</p>
 <th>Type</th>
 <th>Min</th>
 <th>Max</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
@@ -1636,6 +1591,7 @@ Acknowledgement for previously sent commands.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>255</td>
+<td>1</td>
 </tr>
 <tr>
 <td>7</td>
@@ -1643,6 +1599,7 @@ Acknowledgement for previously sent commands.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>1</td>
+<td>0</td>
 </tr>
 <tr>
 <td>8</td>
@@ -1650,13 +1607,13 @@ Acknowledgement for previously sent commands.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>255</td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Handling Behavior:</strong>
-- If <code>status = 0</code> → command successful
-- If <code>status = 1</code> → error occurred, log error_code
-- Generate debug output over UART</p>
+- <code>status = 0</code> → success
+- <code>status = 1</code> → error, log code</p>
 <hr>
 <h2 id="message-type-0x0005-error-event-log">Message Type <code>0x0005</code> — Error / Event Log</h2>
 <p><strong>Description:</strong><br>
@@ -1669,6 +1626,7 @@ System-wide error reporting.</p>
 <th>Type</th>
 <th>Min</th>
 <th>Max</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
@@ -1678,6 +1636,7 @@ System-wide error reporting.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>255</td>
+<td>2</td>
 </tr>
 <tr>
 <td>7</td>
@@ -1685,12 +1644,13 @@ System-wide error reporting.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>3</td>
+<td>2</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Handling Behavior:</strong>
-- Log error message
-- Trigger warning indicator if severity ≥ 2</p>
+- Log error
+- Indicate warning if severity ≥ 2</p>
 <hr>
 <h1 id="broadcast-reactive-messages">Broadcast / Reactive Messages</h1>
 <hr>
@@ -1705,6 +1665,7 @@ Broadcast request for system data.</p>
 <th>Type</th>
 <th>Min</th>
 <th>Max</th>
+<th>Example</th>
 </tr>
 </thead>
 <tbody>
@@ -1714,6 +1675,7 @@ Broadcast request for system data.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>255</td>
+<td>0x1F</td>
 </tr>
 <tr>
 <td>7</td>
@@ -1721,94 +1683,96 @@ Broadcast request for system data.</p>
 <td>uint8_t</td>
 <td>0</td>
 <td>255</td>
+<td>5</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Handling Behavior:</strong>
-- Controller does not generate sensor telemetry
-- May respond with status if required
-- Always forwards message</p>
+- Forward message
+- No direct telemetry generated by this node</p>
 <hr>
 <h1 id="message-handling-implementation">Message Handling Implementation</h1>
-<h2 id="receiver-requirements">Receiver Requirements</h2>
-<p>The controller implements a UART-based message handler that:</p>
+<h2 id="receiver-behavior">Receiver Behavior</h2>
+<p>The ESP32 firmware implements a UART message handler that:</p>
 <ul>
-<li>Reads incoming bytes continuously</li>
+<li>Continuously reads incoming bytes</li>
 <li>Detects valid packet framing (<code>0x41 0x5A ... 0x59 0x42</code>)</li>
-<li>Verifies message length</li>
+<li>Verifies packet length</li>
 <li>Ignores malformed packets</li>
-<li>Drops packets originating from itself</li>
-<li>Forwards packets not addressed to <code>0x04</code></li>
-<li>Processes valid messages addressed to this node</li>
+<li>Drops messages originating from itself</li>
+<li>Forwards messages not addressed to <code>0x04</code></li>
+<li>Processes messages addressed to this node</li>
 </ul>
+<hr>
 <h2 id="processing-logic">Processing Logic</h2>
 <ol>
 <li>Check destination:</li>
-<li>If <code>dst == 0x04</code> → process</li>
+<li>If <code>dst == 0x04</code> → process message</li>
 <li>
-<p>Else → forward</p>
+<p>Else → forward message</p>
 </li>
 <li>
-<p>If message is valid:</p>
+<p>Parse message:</p>
 </li>
-<li>Parse message type</li>
-<li>Extract payload fields</li>
+<li>Identify message type</li>
 <li>
-<p>Execute corresponding handler</p>
+<p>Extract payload data</p>
 </li>
 <li>
-<p>Send ACK:</p>
+<p>Respond:</p>
 </li>
-<li>Always respond to valid commands with <code>0x0004</code></li>
+<li>Send ACK (<code>0x0004</code>) for valid messages</li>
 </ol>
 <hr>
-<h2 id="sender-requirements">Sender Requirements</h2>
-<p>The controller periodically sends:</p>
+<h2 id="sender-behavior">Sender Behavior</h2>
+<p>The controller sends:</p>
 <ul>
-<li>Button press events (<code>0x0043</code>)</li>
+<li>Button press messages (<code>0x0043</code>)</li>
 <li>Motor commands (<code>0x0001</code>)</li>
 </ul>
 <h3 id="constraints">Constraints</h3>
 <ul>
-<li>Must respect max packet size (64 bytes)</li>
-<li>Must avoid reserved prefix/suffix values inside payload</li>
-<li>Must use correct source (<code>0x04</code>) and destination IDs</li>
-<li>Must be non-blocking and rate-limited</li>
+<li>Maximum packet size: 64 bytes</li>
+<li>Payload must not contain reserved frame bytes</li>
+<li>Correct source (<code>0x04</code>) and destination IDs required</li>
+<li>Messages are rate-limited and non-blocking</li>
 </ul>
 <hr>
 <h2 id="error-handling">Error Handling</h2>
-<p>The system safely ignores:</p>
+<p>The system ignores:</p>
 <ul>
 <li>Malformed packets</li>
 <li>Invalid message types</li>
-<li>Messages exceeding buffer size</li>
+<li>Oversized messages</li>
 <li>Unexpected payload values</li>
 </ul>
-<p>Errors may trigger:
-- UART debug print
-- LED indicator (optional)</p>
+<p>Optional debug outputs:
+- UART print statements
+- LED indicators</p>
 <hr>
-<h2 id="software-packaging">Software Packaging</h2>
+<h2 id="software-packaging-esp32">Software Packaging (ESP32)</h2>
 <ul>
 <li>Full firmware project is included as a <code>.zip</code></li>
-<li>Code is structured for:</li>
-<li>Message parsing</li>
-<li>Routing</li>
+<li>Implemented for ESP32 platform</li>
+<li>Code structure includes:</li>
+<li>UART communication</li>
+<li>Packet parsing</li>
+<li>Message routing</li>
 <li>Command handling</li>
 </ul>
 <hr>
 <h2 id="summary">Summary</h2>
 <p>This API ensures that the Controller subsystem:</p>
 <ul>
-<li>Properly integrates into the team daisy-chain network</li>
-<li>Reliably sends user input commands</li>
-<li>Correctly processes acknowledgements and system messages</li>
-<li>Maintains robust communication through validation and error handling</li>
+<li>Integrates with the team daisy-chain network</li>
+<li>Sends valid control commands</li>
+<li>Correctly processes incoming messages</li>
+<li>Maintains reliable communication through validation and routing</li>
 </ul>
 <hr>
 <h2 id="downloads">Downloads</h2>
 <ul>
-<li><a href="LINK_TO_ZIP">Firmware ZIP</a></li>
+<li><a href="LINK_TO_ZIP">ESP32 Firmware ZIP</a></li>
 </ul>
 
 
