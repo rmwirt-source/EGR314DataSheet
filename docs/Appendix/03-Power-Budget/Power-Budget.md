@@ -1,57 +1,82 @@
----
-title: Power Budget
----
-
 # Power Budget — Controller Subsystem
 
-**Assumptions**  
-- Input supply: **2S LiPo (nominal 7.4 V)**  
-- Regulator: **MP2307DN-LF-Z** stepping to **3.3 V**  
-- Regulator efficiency assumed **η = 90%**  
-- Required safety margin: **25%** on total average current
+## Assumptions
+- Input supply: 2S LiPo (nominal 7.4 V)  
+- Regulator: MP2307DN-LF-Z stepping down to 3.3 V  
+- Regulator efficiency: 90%  
+- Safety margin: 25% applied to total average current  
 
-## Component table (copy/paste)
+## Component Power Analysis
 
-| Device | V (V) | Idle I (A) | Active I (A) | Duty active (%) | Avg I (A) |
-|---|---:|---:|---:|---:|---:|
+Each component in the controller subsystem was evaluated using datasheet values for both idle and active current. A duty cycle was applied to estimate the average current draw for each device.
+
+| Device | Voltage (V) | Idle Current (A) | Active Current (A) | Duty Cycle (%) | Average Current (A) |
+|--------|------------|------------------|--------------------|----------------|---------------------|
 | ESP32-S3-WROOM-1-N4 | 3.3 | 0.015000 | 0.400000 | 10 | 0.053500 |
-| TC74A4-3.3VCTTR (temp) | 3.3 | 0.001000 | 0.012000 | 5 | 0.001550 |
-| MP2307 quiescent (Iq) | 3.3 | 0.002000 | 0.002000 | 100 | 0.002000 |
-| Misc (LEDs, pullups, UART, sensors) | 3.3 | 0.002000 | 0.020000 | 10 | 0.003800 |
-| **TOTAL (average)** | 3.3 |  |  |  | **0.060850** |
+| TC74A4-3.3VCTTR (Temperature Sensor) | 3.3 | 0.001000 | 0.012000 | 5 | 0.001550 |
+| MP2307 Quiescent Current | 3.3 | 0.002000 | 0.002000 | 100 | 0.002000 |
+| Misc (LEDs, pull-ups, UART, sensors) | 3.3 | 0.002000 | 0.020000 | 10 | 0.003800 |
+| **Total Average Current** | 3.3 |  |  |  | **0.060850** |
 
-## Margin and power conversion (digit-by-digit)
+## Power and Current Calculations
 
-1. Total average current (Iavg) = **0.060850 A**  
-2. Add 25% safety margin: Iout_with_margin = Iavg × 1.25 = **0.0760625 A**  
-3. Output power Pout = Vout × Iout_with_margin = 3.3 × 0.0760625 = **0.25100625 W**  
-4. Assumed regulator efficiency η = 0.90  
-5. Input voltage Vin = 7.4 V  
-6. Input current from battery Iin = Pout / (Vin × η)  
-   = 0.25100625 / (7.4 × 0.90)  
-   = 0.25100625 / 6.66  
-   = **0.037688626126126126 A**
+The total average current of the controller subsystem is:
 
-## Battery run time example
+\[
+I_{avg} = 0.060850 \, A
+\]
 
-- Example battery: **2200 mAh (2.2 Ah)**  
-- Battery runtime (hours) = Capacity (mAh) / (Iin × 1000)  
-  = 2200 / (0.037688626126126126 × 1000)  
-  ≈ **58.373 hours**
+Applying a 25% safety margin:
 
-## Required battery capacity for a target runtime
+\[
+I_{out} = 0.060850 \times 1.25 = 0.0760625 \, A
+\]
 
-- Target runtime = **8 hours** (example)  
-- Required capacity mAh = Iin × 1000 × target_hours  
-  = 0.037688626126126126 × 1000 × 8  
-  = **301.509 mAh** → recommend at least **400–500 mAh** in practice to allow margin and degradation
+The output power at 3.3 V is:
 
-## Short written explanation (copy/paste)
+\[
+P_{out} = 3.3 \times 0.0760625 = 0.25100625 \, W
+\]
 
-Total controller average current (including 25% safety margin) is **0.0760625 A** at 3.3 V which corresponds to an input draw of **~0.03769 A** from a 2S LiPo assuming 90% regulator efficiency. A 2200 mAh pack would theoretically run the controller subsystem alone for roughly **58 hours** under these conservative estimates. For an 8 hour mission you only need about **0.30 Ah (≈302 mAh)** in theory but pick a larger capacity (typical 1000–2200 mAh) to account for battery ageing, higher duty cycles, additional peripherals, and any possible future motor loads.
+Assuming a regulator efficiency of 90%, the input current from the 7.4 V battery is:
 
-**Design decisions influenced:**  
-- Kept the MP2307 (3 A rated) because regulator headroom is trivial cost and prevents thermal stress during Wi-Fi bursts.  
-- Offloaded processing to the ESP32 to remove a second MCU and reduce idle power overhead.  
-- Used a low-BOM temp sensor (TC74) to keep average current very low.  
-- If motors or actuators get added to this board later, move them to a separate power rail and re-run this budget.
+\[
+I_{in} = \frac{P_{out}}{V_{in} \times \eta} = \frac{0.25100625}{7.4 \times 0.90} \approx 0.03769 \, A
+\]
+
+## Battery Runtime Estimation
+
+Using a 2200 mAh (2.2 Ah) battery:
+
+\[
+\text{Runtime} = \frac{2200}{0.03769 \times 1000} \approx 58.37 \text{ hours}
+\]
+
+This represents an ideal estimate for the controller subsystem only.
+
+For a target runtime of 8 hours:
+
+\[
+\text{Required Capacity} = 0.03769 \times 1000 \times 8 \approx 301.5 \, mAh
+\]
+
+In practice, a larger battery (1000–2200 mAh) is recommended to account for:
+- Battery aging  
+- Higher real-world duty cycles  
+- Additional peripherals  
+- Future system expansion  
+
+## Analysis and Design Insights
+
+The power budget shows that the controller subsystem has relatively low power requirements, and the selected power supply is more than sufficient to support operation with a comfortable margin. However, during testing, the voltage regulator did not function correctly due to improper capacitor placement and grounding.
+
+This highlights an important limitation of power budgeting: while calculations can confirm that a design should work in theory, correct physical implementation is critical for achieving stable operation. In a future revision, the regulator circuit would be redesigned strictly following the datasheet recommendations, including proper capacitor selection, placement, and grounding.
+
+The analysis also reinforces the importance of including a safety margin. The 25% margin helps account for transient current spikes, especially from the ESP32 during Wi-Fi communication, and ensures that the system remains stable under varying operating conditions.
+
+## Design Decisions Influenced by Power Budget
+
+- The MP2307 regulator (rated for 3 A) was retained to provide significant headroom, preventing thermal stress and ensuring stable operation during transient loads.
+- The ESP32 was used as the primary processing unit to reduce the need for additional microcontrollers, minimizing idle power consumption.
+- A low-power temperature sensor (TC74) was selected to keep average current draw minimal.
+- Future designs should separate high-power components, such as motors or actuators, onto a different power rail to avoid introducing noise and instability into the controller subsystem.
