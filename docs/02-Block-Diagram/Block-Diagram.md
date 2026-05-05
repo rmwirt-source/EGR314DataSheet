@@ -22,6 +22,20 @@ This block diagram provides a clear reference for how the controller module inte
 
 ![Controller Module Block Diagram](EGR314_Block_Diagram_WIRT.png)
 
+## Block Diagram Explanation
+
+The block diagram was developed to represent the major functional components of the system and how they interact to meet the overall project requirements.
+
+The central component of the system is the ESP32-S3 microcontroller, which handles both processing and wireless communication. It serves as the main control unit and interfaces with all other subsystems. This design choice simplifies the architecture by combining computation and communication into a single device.
+
+The power subsystem is responsible for converting the input voltage from the battery into a stable 3.3 V supply used by all digital components. This ensures that all devices operate within their required voltage range and provides a consistent power source for reliable operation.
+
+The temperature sensing subsystem connects directly to the microcontroller and provides environmental data. This data is processed by the ESP32 and can be transmitted wirelessly as part of the system’s functionality.
+
+Communication between blocks was structured to minimize complexity while maintaining flexibility. All peripheral components connect directly to the microcontroller, reducing the need for intermediate components and simplifying debugging.
+
+Overall, the block diagram reflects a design that prioritizes simplicity, integration, and reliability. Each block directly supports a system requirement, and the connections between blocks were chosen to ensure efficient data flow and ease of implementation.
+
 ### Downloadable Version
 
 A high resolution PDF version of this block diagram is available here:
