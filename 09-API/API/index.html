@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#api-design-explanation" class="md-skip">
           Skip to content
         </a>
       
@@ -984,9 +984,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#api-design-explanation" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      API Design Explanation
     </span>
   </a>
   
@@ -1417,9 +1417,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#api-design-explanation" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      API Design Explanation
     </span>
   </a>
   
@@ -1634,16 +1634,10 @@
 
   <h1>API — Controller Subsystem (Rylee)</h1>
 
-<h2 id="overview">Overview</h2>
-<p>This page defines the Application Programming Interface (API) for the Controller Input subsystem.</p>
-<p>This node is responsible for:</p>
-<ul>
-<li>Handling local user input</li>
-<li>Sending control commands to motor nodes</li>
-<li>Forwarding network traffic in the daisy chain</li>
-<li>Responding to system level messages</li>
-</ul>
-<p>All messages follow the team defined 64 byte packet structure. This page describes only the message payload in bytes 4 through 61.</p>
+<h2 id="api-design-explanation">API Design Explanation</h2>
+<p>The API was designed to provide a clear interface between the hardware and software components of the system. Each function corresponds to a specific subsystem operation, such as reading sensor data or transmitting information wirelessly.</p>
+<p>The structure of the API ensures that all hardware interactions are abstracted into simple function calls. This improves code readability and makes the system easier to debug and maintain.</p>
+<p>The API also aligns with the team communication protocol by ensuring that all transmitted data follows a consistent format. This allows different parts of the system to communicate reliably and ensures compatibility with other modules.</p>
 <h2 id="node-information">Node Information</h2>
 <table>
 <thead>
