@@ -677,7 +677,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Block Diagram">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-diagram-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Diagram Explanation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Diagram Explanation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1264,7 +1273,16 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Block Diagram">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#block-diagram-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block Diagram Explanation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Block Diagram Explanation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1308,6 +1326,13 @@
 <hr>
 <h2 id="block-diagram">Block Diagram</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../EGR314_Block_Diagram_WIRT.png" data-desc-position="bottom"><img alt="Controller Module Block Diagram" src="../EGR314_Block_Diagram_WIRT.png"></a></p>
+<h2 id="block-diagram-explanation">Block Diagram Explanation</h2>
+<p>The block diagram was developed to represent the major functional components of the system and how they interact to meet the overall project requirements.</p>
+<p>The central component of the system is the ESP32-S3 microcontroller, which handles both processing and wireless communication. It serves as the main control unit and interfaces with all other subsystems. This design choice simplifies the architecture by combining computation and communication into a single device.</p>
+<p>The power subsystem is responsible for converting the input voltage from the battery into a stable 3.3 V supply used by all digital components. This ensures that all devices operate within their required voltage range and provides a consistent power source for reliable operation.</p>
+<p>The temperature sensing subsystem connects directly to the microcontroller and provides environmental data. This data is processed by the ESP32 and can be transmitted wirelessly as part of the system’s functionality.</p>
+<p>Communication between blocks was structured to minimize complexity while maintaining flexibility. All peripheral components connect directly to the microcontroller, reducing the need for intermediate components and simplifying debugging.</p>
+<p>Overall, the block diagram reflects a design that prioritizes simplicity, integration, and reliability. Each block directly supports a system requirement, and the connections between blocks were chosen to ensure efficient data flow and ease of implementation.</p>
 <h3 id="downloadable-version">Downloadable Version</h3>
 <p>A high resolution PDF version of this block diagram is available here:</p>
 <p><a href="../EGR314_Block_Diagram_WIRT.pdf">EGR314 Block Diagram PDF</a></p>
