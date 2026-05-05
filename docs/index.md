@@ -5,9 +5,9 @@ title: Welcome
 <center>
 <font size="6">Rylee Wirt – Controller Module Datasheet</font><br>
 as part of<br>
-<font size="8">EGR 314 Rover System</font><br>
+<font size="8">EGR 314 M.E.G.</font><br>
 for<br>
-<font size="5">Team 301</font><br>
+<font size="5">M.E.G.</font><br>
 
 **Submission: May 4, 2026**
 </center>
