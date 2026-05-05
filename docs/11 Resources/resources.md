@@ -10,7 +10,7 @@ A compressed (.zip) file containing the final ESP32 code is included in the repo
 ## Videos
 The following video demonstrates the final system operation and functionality. It shows how the system performs under normal conditions and verifies that the design meets project requirements.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_LINK" frameborder="0" allowfullscreen></iframe>
+- [Watch Demo Video](https://www.youtube.com/shorts/DzEqYnbHmvQ)
 
 ## CAD / Mechanical Files
 Any CAD files used in the design process, including 3D models or mechanical components, are included below.
