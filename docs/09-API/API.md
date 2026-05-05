@@ -2,18 +2,13 @@
 title: API — Controller Subsystem (Rylee)
 ---
 
-## Overview
+## API Design Explanation
 
-This page defines the Application Programming Interface (API) for the Controller Input subsystem.
+The API was designed to provide a clear interface between the hardware and software components of the system. Each function corresponds to a specific subsystem operation, such as reading sensor data or transmitting information wirelessly.
 
-This node is responsible for:
+The structure of the API ensures that all hardware interactions are abstracted into simple function calls. This improves code readability and makes the system easier to debug and maintain.
 
-* Handling local user input
-* Sending control commands to motor nodes
-* Forwarding network traffic in the daisy chain
-* Responding to system level messages
-
-All messages follow the team defined 64 byte packet structure. This page describes only the message payload in bytes 4 through 61.
+The API also aligns with the team communication protocol by ensuring that all transmitted data follows a consistent format. This allows different parts of the system to communicate reliably and ensures compatibility with other modules.
 
 ## Node Information
 
